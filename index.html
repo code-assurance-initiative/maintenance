@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>Code Assurance Index — scheduled maintenance</title>
+<meta name="description" content="Code Assurance Index is being upgraded ahead of full go-live on 1 November 2026.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #F4F6F8;
+    --surface: #FFFFFF;
+    --ink: #1C2126;
+    --muted: #55606B;
+    --line: #DDE3E8;
+    --accent: #4682B4;
+    --accent-ink: #2F5D85;
+    --accent-wash: #EAF1F7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161A;
+      --surface: #1A1F24;
+      --ink: #E4E9ED;
+      --muted: #9AA6B1;
+      --line: #2C343B;
+      --accent: #7FAACE;
+      --accent-ink: #9BBEDB;
+      --accent-wash: #1E2C39;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    width: 100%;
+    max-width: 560px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 40px 40px 36px;
+    box-shadow: 0 1px 2px rgba(16, 24, 32, .04), 0 12px 32px rgba(16, 24, 32, .06);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .brand svg { width: 36px; height: auto; color: var(--ink); flex: none; }
+  .brand .mark {
+    width: 36px; height: 36px; flex: none;
+    display: grid; place-items: center;
+    border-radius: 10px;
+    background: var(--accent-wash);
+    color: var(--accent-ink);
+    font-weight: 700; font-size: 15px; letter-spacing: .02em;
+  }
+  .brand span { font-weight: 600; font-size: 17px; letter-spacing: -.005em; }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 10px;
+    border-radius: 999px;
+    background: var(--accent-wash);
+    color: var(--accent-ink);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .01em;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 var(--accent);
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+    70%  { box-shadow: 0 0 0 8px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+  h1 {
+    margin: 16px 0 12px;
+    font-size: clamp(24px, 5vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -.015em;
+    font-weight: 700;
+  }
+  p { margin: 0 0 12px; color: var(--muted); }
+  .date {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 24px 0 0;
+    padding: 16px 0 0;
+    border-top: 1px solid var(--line);
+  }
+  .date dt { color: var(--muted); font-size: 14px; }
+  .date dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .da {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .da h2 { margin: 0 0 6px; font-size: 15px; font-weight: 600; color: var(--ink); }
+  .da p { font-size: 15px; margin: 0; }
+  footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    main { padding: 28px 22px 26px; border-radius: 14px; }
+    .brand { margin-bottom: 24px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <div class="mark" aria-hidden="true">CAI</div>
+    <span>Code Assurance Index</span>
+  </div>
+
+  <div class="status" role="status"><span class="dot" aria-hidden="true"></span>Scheduled maintenance</div>
+
+  <h1>We're upgrading our infrastructure</h1>
+  <p>Code Assurance Index is temporarily unavailable while we upgrade our infrastructure in preparation for full go-live.</p>
+  <p>Thank you for your patience. Please check back shortly.</p>
+
+  <dl class="date">
+    <dt>Full go-live</dt>
+    <dd><time datetime="2026-11-01">1 November 2026</time></dd>
+  </dl>
+
+  <section class="da" lang="da" aria-label="På dansk">
+    <h2>Vi opgraderer vores infrastruktur</h2>
+    <p>Vi er i øjeblikket ved at opdatere vores infrastruktur som forberedelse til fuld go-live den 1. november 2026. Tak for jeres tålmodighed.</p>
+  </section>
+</main>
+<footer>Code Assurance Index</footer>
+</body>
+</html>
